@@ -1,0 +1,31 @@
+
+
+  .chat-footer {
+    flex: 1;
+    padding: 1rem;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  .chat-input {
+    border-radius: 0;
+    outline: none !important ;
+    border:.1rem solid #ccc;
+    border-right: 0;
+    padding: 1.5rem ;
+    
+  }
+  .input-btn1 {
+    outline: none !important;
+    border-top:.1rem solid #ccc;
+    border-bottom:.1rem solid #ccc;
+  }
+  .input-btn2 {
+    outline: none !important;
+    border-top:.1rem solid #ccc;
+    border-bottom:.1rem solid #ccc;
+    border-right:.1rem solid #ccc;
+  }
+  .input-btn1:focus , .input-btn2:focus{
+    outline: none !important;
+  }
+  

@@ -1,0 +1,25 @@
+
+  .menu-section {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+  }
+  .menu-section-title {
+    padding: 0 var(--margin-padding);
+    display: flex;
+    height: var(--default-menu-item-height);
+    align-items: center;
+    font-weight:bold;
+    color:var(--secondary-title);
+    font-size:var(--title-font-size);
+  }
+  .menu-title-text {
+    flex-basis: 50%;
+    justify-content: flex-start;
+  }
+  .menu-title-count {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }

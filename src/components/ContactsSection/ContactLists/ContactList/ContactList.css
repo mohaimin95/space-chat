@@ -1,0 +1,37 @@
+
+  .contact-list-view {
+    cursor: pointer;
+    width:100%;
+    height: 2rem;
+    display: flex;
+    padding: 0 var(--margin-padding);
+    align-items: center;
+    font-size:var(--title-font-size);
+    transition:.4s;
+  }
+  .contact-list-view.active {
+    font-weight:bold;
+  }
+  .contact-list-view:hover {
+    cursor:pointer;
+    transition:.4s;
+    width: 100%;
+    background-color:rgba(0,0,0,0.5) 
+  }
+  .contact-list-details {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+  }
+  .contact-status {
+    color:var(--offline);
+    font-size:.1rem;
+  }
+  .contact-status.online {
+    color:var(--online);
+  }
+  .contact-count-section {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: flex-end;
+  }

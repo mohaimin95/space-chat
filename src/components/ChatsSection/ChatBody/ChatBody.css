@@ -1,0 +1,26 @@
+
+  /* chat body */
+  .chat-body {
+    font-size: var(--title-font-size);
+    width: 100%;
+    flex: 16;
+    padding: .2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  .chat-body::-webkit-scrollbar {
+    width: .5rem;
+  }
+  .chat-body::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  /* Handle */
+  .chat-body::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.5)
+  }
+  /* Handle on hover */
+  .chat-body::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+  }

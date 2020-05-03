@@ -1,0 +1,14 @@
+
+  .header-menu-title {
+    flex-basis: 50%;
+    flex-direction: flex-start;
+  }
+  .dp {
+    background-color:#26d198;
+    padding: .4rem .65rem;
+    border-radius:9px;
+    font-weight:bold;
+  }
+  .header-status {
+      position: absolute;
+  }

@@ -1,0 +1,43 @@
+
+.chat-container {
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+  }
+  
+  /* Contacts list starts*/
+  .contacts-list::-webkit-scrollbar {
+    width: .2rem;
+  }
+  .contacts-list::-webkit-scrollbar-track {
+    background: var(--contacts-bg-color) 
+  }
+  /* Handle */
+  .contacts-list::-webkit-scrollbar-thumb {
+    background: #fff;
+  }
+  /* Handle on hover */
+  .contacts-list::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+  }
+  .contacts-list {
+    background-color:var(--contacts-bg-color);
+    color:#fff;
+    height:100vh;
+    width: var(--contacts-section);
+    overflow-y: scroll;
+  }
+  .header-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Contacts section starts*/
+  .contacts-section {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+  }
+  /* Contact view */
+  
+  

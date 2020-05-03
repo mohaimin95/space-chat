@@ -1,13 +1,16 @@
+:root {
+  --left-margin:.5rem;
+  --secondary-title:#9ea2a8;
+  --title-font-size:.75rem;
+  --online:#26d198;
+  --offline:#ccc;
+  --contacts-bg-color:#2f343d;
+  --default-menu-item-height:2rem;
+  --contacts-section:14%;
+  --margin-padding:.5rem;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

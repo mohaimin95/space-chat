@@ -1,0 +1,54 @@
+/* Chat section starts*/
+.chat-section {
+    width: 100%;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .chat-header {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+  }
+  .chat-title {
+    display: flex;
+    flex-basis: 50%;
+    align-items: center;
+  }
+  .chat-header-dp {
+    background-color:#26d198;
+    color: #fff;
+    padding: 12px;
+    border-radius:.2rem;
+    font-weight:bold;
+  }
+  .chat-title-name::before {
+    content: "@";
+  }
+  .chat-title-status {
+    color: #9ea2a8;
+  }
+  .chat-title-status > i {
+    font-size: .6rem;
+  }
+  .fa-heart.active {
+    color: red;
+  }
+  .chat-title-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .chat-menu {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .chat-menu-item {
+    cursor: pointer;
+    margin-right: 2rem;
+  }
