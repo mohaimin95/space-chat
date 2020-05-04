@@ -4,7 +4,11 @@ import ContactList from "./ContactLists/ContactList/ContactList";
 import GroupList from "./GroupLists/GroupList/GroupList";
 import MenuSection from "./MenuSection/MenuSection";
 import ContactsHeader from "./ContactsHeader/ContactsHeader";
-const ContactsSection = () => {
+import { connect } from "react-redux";
+const ContactsSection = (props:any) => {
+    const sum = (arr:any[],key:string) => {
+        return arr.reduce((acc:any,curr:any)=>(acc + +(curr[key] || 0)),0)
+    }
     return (
         <div className=" contacts-list d-none d-md-block">
             <div className="header-section">
@@ -14,20 +18,29 @@ const ContactsSection = () => {
                         <ContactList status="online" username="Salim Malik" count="2" />
                         <ContactList username="Fawaz" count="10" />
                     </MenuSection>
-                    <MenuSection title="Unread" count="1">
-                        <GroupList count="2" groupName="Googlers" />
-                        <GroupList count="2" groupName="MTCT" />
-                        <GroupList count="0" groupName="PUbG Army" image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE_cao0o5fQpspadipFpLP4l3xM6IVpkGnFaiSZBWDOjY6zqkg&usqp=CAU" />
+                    <MenuSection title="Unread" count={sum(props.groups,'count')}>
+                        {
+                            props.groups.map((group:any,i:number)=>(
+                                <GroupList key={i} {...group} />
+                            ))
+                        }
                     </MenuSection>
-                    <MenuSection title="Unread" count="1"><ContactList status="online" username="Salim Malik" count="2" />
-                        <ContactList username="Abdul Mohaimin" count="0" />
-                        <ContactList username="Fawaz" count="10" />
-                        <ContactList username="Safiya" image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVU81vVzcTd-iXZo4rfXXN_WSPncFr9vIo_wL3RO0uBeMGcvqF&usqp=CAU" count="10" />
+                    <MenuSection title="Unread" count={sum(props.contacts,'count')}>
+                        {
+                            props.contacts.map((contact:any,i:number)=>(
+                                <ContactList key={i} {...contact} />
+                            ))
+                        }
                     </MenuSection>
                 </div>
             </div>
         </div>
     )
 }
-
-export default ContactsSection;
+const mapStateToProps = (state:any) => {
+    return {
+        contacts:state.app.contacts,
+        groups:state.app.groups
+    }
+}
+export default connect(mapStateToProps)(ContactsSection);

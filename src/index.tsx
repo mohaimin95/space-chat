@@ -2,12 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { Provider } from "react-redux";
 import * as serviceWorker from './serviceWorker';
+import { createStore, combineReducers } from 'redux';
+import appReducer from './store/reducers/app.reducer';
+
+let store = createStore(
+  combineReducers({
+    app:appReducer
+  })
+)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
